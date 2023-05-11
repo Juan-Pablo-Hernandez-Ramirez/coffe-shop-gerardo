@@ -1,0 +1,51 @@
+tipo_art,Nombre,Descripcion,,costo,unidad,existencia
+1,Agua ciel 1.5L,Agua purificada de 1.5L,,9,1,0
+1,Agua ciel 1L,Agua purificada de 1L,,8,1,0
+1,Arbolito fresa,Agua con sabor a fresa,,8,1,0
+1,Arbolito rompope,Agua con sabor a rompope,,8,1,0
+1,Arbolito café,Agua con sabor a café,,8,1,0
+1,Arbolito coco,Agua con sabor a coco,,8,1,0
+1,Powerade,Bebida para deportistas que hidrata y recupera 4 de los minerales que se pierden al sudar.,,10,1,0
+2,Torta de Carnitas,"Bolillo con jitomate, cebolla, aguacate, chiles y carnitas .",,17,1,0
+1,Leche Santa Clara,Leche 100% pura de vaca de Santa Clara.,,6,1,0
+1,Tikito,Leche semidescremada ideal para el desayuno o durante la escuela.,,3,1,0
+1,Pizza ,"Rebanadas de pizza de pepperoni, chorizo, etc.",,10,1,0
+2,Hamburguesa,"Incluye lechuga, cebolla, jitomate, carne molida, mayonesa, mostaza y aguacate.",,17,1,0
+2,Flautas,"Orden con 4 flautas preparadas con lechuga, queso y crema, salsa de jitomate.",,17,1,0
+2,HotDog,"Panecillo largo lleno con una salchicha, que se consume caliente, y untado de mostaza o ketchup.",,7,1,0
+2,Enchiladas," tortilla de maíz, bañada en una salsa.",,17,1,0
+1,Chicles trident,Gomas de mascar .,,1,1,0
+1,Galletas,Galletas Oreo con un sabor a chocolate.,,10,1,0
+1,Cacahuates Japoneses,"Es un tipo de fruto seco basado en el maní,? su sabor suele ser ligeramente dulce y salado.",,6,1,0
+1,Mazapan chocolate,Mazapán de chocolate.,,3,1,0
+1,Duvalin,Deliciosa crema de caramelo con sabor a avellana.,,5,1,0
+1,Quesadillas,"Tortilla de harina con queso, jitomate, cebolla,aguacate y jamón.",,12,1,0
+2,Sandwich,"Lleva jamón, queso, cebolla, jitomate, chiles y mayonesa. ",,12,1,0
+2,Bolillo guisado,Bolillo con guisado de su preferencia.,,12,1,0
+1,Coca-cola,Bebida azucarada gaseosa de sabor cola.,,10,1,0
+1,Fuze tea te negro,Té helado sabor té negro.,,10,1,0
+1,Jumex,Jugo de néctar.,,9,1,0
+1,Jugo del valle naranja,Es una bebida ligera que contiene néctar y pulpa de naranja.,,9,1,0
+1,Arizona,"Arizona combina las ventajas para la salud del té, con una variedad de sabores exóticos, jugos de frutas, ginseng y miel.",,10,1,0
+1,Gansito,"Pequeño pastelito relleno de crema y mermelada de fresa, que tiene cobertura de chocolate y está espolvoreado con chispas de chocolate.",,7,1,0
+1,Donas,Pieza de repostería en forma de rosca  y generalmente glaseada o cubierta de chocolate.,,6,1,0
+1,Pan dulce,Delicioso pan fresco en forma de concha con suave sabor a vainilla.,,5,1,0
+2,Carlota,Postre cremoso sin horno compuesto por capas de galleta maría y una deliciosa crema de limón.,,12,1,0
+1,Paleta de la rosa,Paleta de dulce marca de la rosa.,,2,1,0
+1,Lucas ,Es una mezcla de chilito con sabor a chamoy.,,5,1,0
+2,Burrito,Tortilla enrollada en forma de ovoide rellena de diversos ingredientes .,,10,1,0
+1,Frapuccino,"Se compone de café u otro ingrediente de base, mezclado con hielo.",,9,1,0
+1,Paleta hielo,Paleta de hielo .,,7,1,0
+1,Smoothie mango,Nieve de mango con chamoy.,,7,1,0
+2,Torta jamón,"La torta incluye jamón, mayonesa, cebolla, jitomate, chiles y el bolillo está un poco tostado.",,12,1,0
+1,Cacahuates garapiñados,"Son una perfecta mezcla de sabor dulce son salado, con una cubierta crujiente.",,6,1,0
+1,Krankys,Deliciosos copos de maíz cubiertos de chocolate.,,6,1,0
+1,Panditas,Las clásicas gomitas dulces con sabor a frutas.,,6,1,0
+1,Agua ciel limón,Agua sabor limón sin azúcar de 1L.,,6,1,0
+1,Brownies,Bizcocho de chocolate pequeño.,,6,1,0
+1,Palomitas,Bolsa de palomitas. ,,8,1,0
+1,Rollo sushi,"Rollo de alga nori relleno de arroz y distintos ingredientes como pescado, marisco, frutas o verduras.",,12,1,0
+1,Cubrebocas,"Están diseñados para evitar la diseminación de microorganismos que se alojan en boca, nariz y garganta.",,2,1,0
+1,Agua ciel 600ml,Agua purificada de 600 ml.,,7,1,0
+2,Bionicos,Frutas picadas con yogurt y cereales. ,,12,1,0
+2,Tacos guisado,Tortilla con guisado de su preferencia.,,7,1,0
