@@ -8,8 +8,6 @@
 
     //definimos todas las variables necesarias
     $email = $_POST['email'];
-    $passwor = $_POST['password'];
-    $password = base64_encode($passwor);
     $nombre = $_POST['nombre'];
     $apPaterno = $_POST['apPaterno'];
     $apMaterno = $_POST['apMaterno'];
@@ -21,7 +19,7 @@
     $rol = $_POST['rol'];
 
     //hacemos un update que es para modificar datos con todos los datos
-    $query = "UPDATE users SET email='$email', password='$password', nombre='$nombre', apPaterno='$apPaterno', apMaterno='$apMaterno', fechaNacimiento='$fechaNacimiento',continente_id='$continente_id', pais_id='$pais_id',ciudad_id='$ciudad_id', telefono='$telefono',rol='$rol'
+    $query = "UPDATE users SET email='$email', nombre='$nombre', apPaterno='$apPaterno', apMaterno='$apMaterno', fechaNacimiento='$fechaNacimiento',continente_id='$continente_id', pais_id='$pais_id',ciudad_id='$ciudad_id', telefono='$telefono',rol='$rol'
     WHERE id = $id";
     //se ejecuta
     $resulatdo = $con->query($query);

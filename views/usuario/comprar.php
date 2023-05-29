@@ -1,12 +1,12 @@
 <?php
     include_once "funciones.php";
-    $productos = obtenerProductosEnCarrito();
+    $productos = obtenerProductoscompra();
     echo "compraste <br>";
 
     $total=0;
 
     foreach ($productos as $producto) {
-        $total += $producto[3];
+        $total += $producto[2];
         
         echo $producto[1].'<br>';
     }
@@ -18,9 +18,9 @@
     echo '<br>';
     echo '<br>';
 
-    echo 'tu ticket es el';
-
-   
+    echo 'tu ticket es el'.$producto[4];
+    
+    
 	
 	require "phpqrcode/qrlib.php";    
 	

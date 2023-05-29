@@ -28,9 +28,6 @@ $conexion = mysqli_connect('localhost', 'id20540950_eltioessus', 'R^oY=SP33fs?Yr
     <h1 class="ta-l" style="float:left"> Gestion de usuarios </h1>
     
     
-    <button style="float:right" class="cp-2">
-            <a class="add-button w-1 fs-3" id="./agregarArticulos.php" href="./altaUsuario.php">Alta</a>
-        </button>
         <table cellpadding="10" class="container align-x w-10">
             <thead>
                 <tr>
@@ -67,6 +64,7 @@ $conexion = mysqli_connect('localhost', 'id20540950_eltioessus', 'R^oY=SP33fs?Yr
                                 <input type="hidden" name="id" value="<?php echo $mostrar['id'] ?>">
                                 <button type="submit" value="Editar" class="edit-button fs-3"> Editar </button>
                             </form>
+                            <input id="descuento" type="num" name="Descuento" placeholder="0-100" id="Des" minlength="0" maxlength="100" pattern="[0-9]*">
                         </td>
     
                         <td>

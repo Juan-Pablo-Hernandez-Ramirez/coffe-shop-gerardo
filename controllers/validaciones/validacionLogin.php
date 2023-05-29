@@ -3,16 +3,17 @@
     //la validacion para el login
     
     
+    
     //hacemos una conexion con la base de datos
     $conexion = mysqli_connect("localhost","id20540950_eltioessus","R^oY=SP33fs?Yr~9","id20540950_coffeeshop"); 
     $email=$_POST['email'];
-    $passwor=$_POST['password'];
     //se encripta la contraseña
-    $password=base64_encode($passwor);
+    
     session_start();//se activa la sesion
+    
 
     //hacemos una consulta con la base de datos
-    $consulta="SELECT*FROM users where email='$email' and password='$password'";
+    $consulta="SELECT*FROM users where email='$email'";
 
     //hacemos un resulatdo con la conexion y la consulta
     $resultado=mysqli_query($conexion,$consulta);
@@ -22,13 +23,14 @@
     $filas=mysqli_num_rows($resultado);
 
     //una condicion para los roles 
+    
     if($filas){
         while($rowData = mysqli_fetch_array($resultado)){
             //la sesion se va a activar por el email
             $_SESSION['id'] = $rowData['id'];
             $_SESSION['email']=$rowData['nombre'];
             $_SESSION['rol']=$rowData['rol'];
-      }
+}
       //si el rol es de usuario entonces te llevara a la pagina de usuarios
     if($_SESSION['rol'] == "U"){
         header('Location: ../../views/usuario/menu.php');
@@ -49,7 +51,6 @@
         <?php
     }
 
- 
 
 
 

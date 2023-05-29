@@ -12,6 +12,8 @@ session_start();
 <body>
 <?php
 include_once "funciones.php";
+
+
 $productos = obtenerProductosEnCarrito();
 ?>
 <ul class="choose-color">
@@ -28,9 +30,10 @@ $productos = obtenerProductosEnCarrito();
                     <!-- Se crean 3 columnas dentro de una fila -->
                     <th style="width: 18%; height: 50px;"> Nombre </th>
                     <th style="width: 18%; height: 50px;"> Descripcion </th>
+                    <th style="width: 18%; height: 50px;"> Cantidad </th>
                     <th style="width: 18%; height: 50px;"> Precio </th>
+                    <th style="width: 18%; height: 50px;"> Aregar </th>
                     <th style="width: 18%; height: 50px;"> Borrar </th>
-    
                 </tr>
             </thead>
     
@@ -41,19 +44,28 @@ $productos = obtenerProductosEnCarrito();
             <?php
                     $total = 0;
                     foreach ($productos as $producto) {
-                        $total += $producto[3];
+                        $multiplicacion = $producto[3] * $producto[4];
+                        $total += $multiplicacion ;
                     ?>
     
                     <tr>
                        <td><?php echo $producto[1] ?></td>
                         <td><?php echo $producto[2] ?></td>
-                        <td>$<?php echo number_format($producto[3], 2) ?></td>
+                        <td><?php echo $producto[4] ?></td>
+                        <td>$<?php echo number_format($multiplicacion, 2) ?></td>
                         
+                        <td>
+                            <form action="./agrega.php" method="post">
+                                <input type="hidden" name="id_pro" value="<?php echo $producto[5]?>">
+                                <button class="edit-button fs-3">  +  </button>
+                            </form>
+                        </td>
                         <td>
                             <form action="./eliminar.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $producto[0]?>">
                                 <button type="submit" value="Borrar" class="delete-button fs-3"> Borrar </button>
                             </form>
+                            
                         </td>
                     </tr>
     
@@ -66,12 +78,12 @@ $productos = obtenerProductosEnCarrito();
             </tbody>
             <tfoot>
                     <tr>
-                        <td colspan="2" ><strong>Total</strong></td>
-                        <td colspan="1" >
+                        <td colspan="3" ><strong>Total</strong></td>
+                        <td colspan="2" >
                             $<?php echo number_format($total, 2) ?>
                         </td>
                         <td>
-                            <form action="comprar.php">
+                            <form action="crearhistorial.php">
                             <button type="submit" value="Comprar" name="Comprar" class="edit-button fs-3"> Comprar </button>
                             </form>
                         </td>

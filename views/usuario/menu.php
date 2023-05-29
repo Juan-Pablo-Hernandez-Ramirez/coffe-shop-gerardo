@@ -18,6 +18,7 @@ $conexion = mysqli_connect('localhost', 'id20540950_eltioessus', 'R^oY=SP33fs?Yr
     <ul class="choose-color">
         <li><a href="../../controllers/validaciones/logout.php"> Logout</a></li>
         <li><a href="./carrito.php">Carrito</a></li>
+        <li><a href="./historial.php">Historial</a></li>
     </ul>
     
     <h2>Hola 
@@ -61,10 +62,19 @@ $conexion = mysqli_connect('localhost', 'id20540950_eltioessus', 'R^oY=SP33fs?Yr
             
            <form action="./agregacar.php" method="post">
                 <input type="hidden" value="<?php echo $mostrar['Id_art'] ?>" name="id_pro">
+            <?php if($mostrar['descuento'] > 1 ){ ?>
+            
+            <button class="submit-button fs-3">
+                Descuento <?php 
+                $des = $mostrar['descuento']/100;
+                echo $mostrar['precio']* $des;?>
+            </button>
+            <?php  }else{ ?>
             <button class="submit-button fs-3">
                 comprar $
-                <?php echo $mostrar['precio'] ?>
+                <?php echo $mostrar['precio']?>
             </button>
+            <?php } ?>
             </form>
         </div>
 

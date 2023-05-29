@@ -30,7 +30,6 @@
         <h2 class="cmb-5">
             ¡Hola
             <?php echo $_SESSION['email'] ?>!¿Que deseas hacer?
-             <?php echo $_SESSION['id'] ?>
             
         </h2>
         

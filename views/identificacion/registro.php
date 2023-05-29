@@ -22,6 +22,18 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
     $expass = "/[1? 2? 3? 4? 5? 6? 7? 8? 9? 0? $? #? &? :? ;? ,? .? !? ]/";
     
   }
+  
+  if (isset($_POST['apellidos'])){
+  $apellido = $_POST['apellidos']; 
+
+
+$domains = explode(' ', $apellido);
+  
+  $app = $domains[0];
+  $apm = $domains[1];
+  $nombres = $_POST['nombres'];
+  $emails = $_POST['emails'];
+  }
 ?>
 
 
@@ -44,6 +56,7 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
 <!--encabezado de la pagina-->
 <nav>
   <ul class="choose-color">
+      <li><a href="../../index.php">Home</a></li><!--enlace para llevarte al home-->
       <li><a href="./login.php"> Login</a></li>
   </ul>
 </nav>
@@ -83,16 +96,19 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
       <h1 class="align-x w-5 fc-1 fs-1 cmb-4 ta-c"> ¡Registrate! </h1><!--titulo-->
       <!--minleingth es el minimo de caracteres, maxlength es el numero de caracteres maxlength el numero de caracteres maximos-->
       <!--input para el apellido paterno-->
-      <input id="input-registro" placeholder="Apellido paterno" type="text" name="apPaterno" id="apPaterno" minlength="1" maxlength="20" value="<?php if(isset($apPaterno)) echo $apPaterno; ?>" required />
+      <input id="input-registro" placeholder="Apellido paterno" type="text" name="apPaterno" id="apPaterno" minlength="1" maxlength="20" value="<?php if(isset($apPaterno)) echo $apPaterno;
+                                           if(isset($app)) echo $app;?>" required />
       
       
 
       <!--input para el apellido materno-->
-      <input id="input-registro" type="text" name="apMaterno" placeholder="Apellido materno" id="apMaterno" minlength="1" maxlength="20" value="<?php if(isset($apMaterno)) echo $apMaterno; ?>" required/>
+      <input id="input-registro" type="text" name="apMaterno" placeholder="Apellido materno" id="apMaterno" minlength="1" maxlength="20" value="<?php if(isset($apMaterno)) echo $apMaterno;
+                                           if(isset($apm)) echo $apm;?>" required/>
 
       
       <!--input para el nombre-->
-      <input id="input-registro" type="text" name="nombre" placeholder="Nombres" id="nombre" minlength="1" maxlength="30"  value="<?php if(isset($nombre)) echo $nombre; ?>" pattern="[A-Z a-z]*" required />
+      <input id="input-registro" type="text" name="nombre" placeholder="Nombres" id="nombre" minlength="1" maxlength="30"  value="<?php if(isset($nombre)) echo $nombre;
+                                if(isset($nombres)) echo $nombres;?>" pattern="[A-Z a-z]*" required />
       
 
 
@@ -102,7 +118,6 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
       <!--un select para paises-->
       <select id="continente_id" name="continente_id" required>
 
-        <option value="null"><b>Selecciona un pais </b></option>
         <option value="146">Mexico</option>
         <?php foreach ($countries as $c) : ?>
           <option value="<?php echo $c->id; ?>" disabled><?php echo $c->nombre; ?></option>
@@ -111,19 +126,18 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
       
       <!--un select para el estado-->
      <select id="pais_id" name="pais_id" required>
-        <option value="null">--Selecciona un estado--</option>
+        <option value="1">Aguascalientes</option>
     </select>
     <!--select para el municipio-->
     <select id="ciudad_id" name="ciudad_id" required>
-      <option value="null">--Selecciona un municipio--</option>
+      <option value="1">Aguascalientes</option>
     </select>
     
     <!--input para el telefono-->
       <input id="input-registro" type="tel" name="telefono" placeholder="Numero" id="tel" minlength="10" maxlength="10" pattern="[0-9]*" value="<?php if(isset($telefono)) echo $telefono; ?>" required/>
       <!--input para el email-->
-      <input id="input-registro" type="email" placeholder="Correo elctronico" name="email" id="email" value="<?php if(isset($email)) echo $email; ?>" required/>
+      <input id="input-registro" type="email" placeholder="Correo elctronico" name="email" id="email" value="<?php    if(isset($emails)) echo $emails;?>"/>
       <!--input para la contraseña-->
-      <input id="input-registro" name="password" type="password" placeholder="Contraseña" id="password" minlength="10" maxlength="30"  required/>
 
       
       <input id="input-registro" type="hidden" name="rol" value="U" required>
@@ -134,22 +148,6 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
       <button class="submit-button w-5 fs-3" type="submit" name="registrar" value="registrar">
         Registrarme
       </button>
-      <?php
-      //validacion para el email
-        if(isset($_POST['registrar'])){
-          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-              echo "<p> El email es Incorrecto debe ser terminacion @gmail.com </p>";
-            return false;
-
-        }
-        //validacion para la contraseña
-        if(!preg_match($expass,$password)){
-            echo "<p>*La contraseña ingresada no es valida incluye una mayuscula, minusculas, numeros y un caracter especial ($ #)</p>";
-            return false;
-            
-            }
-        }
-      ?>
       
     </form>
     <?php

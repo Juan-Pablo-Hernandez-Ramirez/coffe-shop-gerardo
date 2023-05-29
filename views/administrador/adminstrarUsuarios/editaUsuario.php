@@ -35,7 +35,6 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
     $apMaterno=$_POST['apMaterno'];
     $nombre = $_POST['nombre'];
     $telefono = $_POST['telefono'];
-    $password = $_POST['password'];
     $expresion = "/   ?/i";
     //expresion de caracteres opcionales para la contraseña
     $expass = "/[1? 2? 3? 4? 5? 6? 7? 8? 9? 0? $? #? &? :? ;? ,? .? !? ]/";
@@ -99,8 +98,6 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
             <!--campo para ingresar el email-->
             <input id="input-edita-usuario" type="text" name="email" id="email" required value="<?php echo $mostrar['email'] ?>"> 
             
-            <!--campo para la contraseña-->
-            <input id="input-edita-usuario" type="password" name="password" id="pass" required value="<?php echo base64_decode($mostrar['password']) ?>">
             <!--input para el nombre-->
             
             <input id="input-edita-usuario" type="text" name="nombre" id="nom" required value="<?php echo $mostrar['nombre'] ?>"> 
@@ -188,12 +185,7 @@ while ($r = $query->fetch_object()) { //r es lo que devuelve el query, y se ince
             return false;
 
         }
-        //validacion para la contraseña
-        if(!preg_match($expass,$password)){
-            echo "<p>*La contraseña ingresada no es valida incluye una mayuscula, minusculas, numeros y un caracter especial ($ # ?)</p>";
-            return false;
-            
-            }
+
         }
       ?>
     

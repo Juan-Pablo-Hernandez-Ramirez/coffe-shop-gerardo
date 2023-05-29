@@ -1,6 +1,7 @@
 <?php
 
-session_start();
+session_start();//se activa la sesion
+
 
 if(isset($_SESSION['rol'])){
 
@@ -10,9 +11,9 @@ if($_SESSION['rol'] == "U"){
     header('Location: ../../views/administrador/paginaPrincipal.php');
 }else if ($_SESSION['rol'] == "P"){
     header('Location: ../../views/personal/paginaPersonal.php');
-}
-}
-
+}else{
+ $aes = 'A la espera de la solicitud';
+}}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,6 @@ if($_SESSION['rol'] == "U"){
 <nav>
   <ul class="choose-color">
     <li><a href="./views/identificacion/login.php">Login</a></li>
-    <li><a href="./views/identificacion/registro.php">Registro</a></li>
   </ul>
 </nav>
 
@@ -38,6 +38,15 @@ if($_SESSION['rol'] == "U"){
       <img class="align-x" src="./assets/images/logo/logo-home.jpg" alt="">
       <h2>
         ¡Bienvenido a Coffee Shop!
+      </h2>
+    </td>
+    <td class="cp-5 ta-c pt-5" id="data-content">
+      <h2>
+        <?php
+        if(isset($aes)){
+            echo $aes;
+        }
+        ?>
       </h2>
     </td>
   </tbody>

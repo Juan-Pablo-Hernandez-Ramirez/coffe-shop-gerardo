@@ -2,6 +2,7 @@ html { background-color: rgb(239, 239, 239); }
 
 * { font-family: Helvetica; font-weight: bold;}
 
+
 a{
 	font-weight: lighter;
 	color: rgb(0, 68, 255);
@@ -157,6 +158,28 @@ button{
 	background-color: rgb(77, 139, 255);
 	color: rgb(255, 255, 255);
 }
+.form-input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 390px;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-out;
+}
+
+.form-input:focus+.floating-label,
+.form-input:not(:placeholder-shown)+.floating-label {
+    font-size: 14px;
+    top: 0;
+    transform: translateY(-100%);
+    color: #2b2b2b;
+}
 
 .fc-1 { color: rgb(255, 150, 2); } /* Font color */
 .fc-2 {	color: rgb(68, 68, 68); }
@@ -181,6 +204,7 @@ h1, h2, h3, h4, h5, h6{
 }
 input {
 	height: 40px;
+	margin-top: 15px;
 	margin-bottom: 20px;
 	/*top left bottom right*/
 	padding: 5px 20px 5px 20px;
@@ -211,7 +235,7 @@ input:hover {
 #input-alta-usuario{ width: 92%; }
 #input-edita-productos{ width: 92%; }
 #input-edita-usuario{ width: 92%; }
-#input-login{ width: 70%; }
+#input-login{ width: 100%; }
 #input-registro{ width: 92%; }
 #input-file{ width: 92%; }
 

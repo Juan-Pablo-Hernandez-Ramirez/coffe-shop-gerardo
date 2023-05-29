@@ -15,12 +15,13 @@
         <li><a href="../../controllers/validaciones/logout.php"> Logout</a></li>
     </ul>
     <ul class="choose-color">
-        <li><a href="../usuario/comprar.php"> Pedidos</a></li>
+        <li><a href="./obtenerp.php"> Pedidos</a></li>
     </ul>
 
     <ul class="choose-color">
         <li><a href="camara.php">Scanear QR</a></li>
     </ul>
+    
     
     <!--<ul class="choose-color">
         <li><a href="index.html">prueba</a></li>

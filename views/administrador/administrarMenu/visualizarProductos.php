@@ -54,6 +54,7 @@ $conexion = mysqli_connect('localhost', 'id20540950_eltioessus', 'R^oY=SP33fs?Yr
                     <th style="width: 24%; height: 50px;">Existencia</th>
                     <th style="width:  8%; height: 50px;">Editar </th>
                     <th style="width:  8%; height: 50px;">Borrar </th>
+                    <th style="width:  8%; height: 50px;">Descuento </th>
 
     
                 </tr>
@@ -90,6 +91,12 @@ $conexion = mysqli_connect('localhost', 'id20540950_eltioessus', 'R^oY=SP33fs?Yr
                                 <input id="input-edita-usuario" type="hidden" name="id" value="<?php echo $mostrar['Id_art'] ?>">
                                 <button class="delete-button fs-3"> Borrar </button>
                             </form>
+                        </td>
+                        <td>
+                            <form action="./upDescuento.php" method="post">
+                                <button class="edit-button fs-3"> Descuento </button>
+                            </form>
+                            <input id="descuento" type="num" name="Descuento" placeholder="0-100" id="Des" minlength="0" maxlength="100" pattern="[0-9]*">
                         </td>
                     </tr>
     
